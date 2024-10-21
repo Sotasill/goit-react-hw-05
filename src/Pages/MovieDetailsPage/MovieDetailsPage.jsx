@@ -4,7 +4,7 @@ import css from "./MovieDetailsPage.module.css"
 import { fetchMovieById } from "../../moviesAPIrequest";
 
 export default function MovieDetailsPage() {
-  const { filmId } = useParams();
+  const { movieId } = useParams();
   const [film, setFilm] = useState(null);
   const [fetchError, setFetchError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +17,7 @@ export default function MovieDetailsPage() {
       try {
         setFetchError(false);
         setIsLoading(true);
-        const data = await fetchMovieById(filmId);
+        const data = await fetchMovieById(movieId);
         setFilm(data);
 
         
@@ -31,7 +31,7 @@ export default function MovieDetailsPage() {
       }
     }
     fetchFilmById();
-  }, [filmId]);
+  }, [movieId]);
 
   return (
     <div>
