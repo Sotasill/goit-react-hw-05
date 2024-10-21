@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieCast } from "../../moviesAPIrequest.js"; 
+import css from './MovieCast.module.css'
 
 export default function CastDetails() {
   const { movieId } = useParams();
@@ -23,7 +24,7 @@ export default function CastDetails() {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.container}>
       {hasError && <p>Oops, something went wrong!</p>}
       {actors && actors.length > 0 ? (
         <ul>

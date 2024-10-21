@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MovieList from "../../components/MoviesList/MoviesList";
 import { fetchPopularMovies } from "../../moviesAPIrequest";
+import css from './HomePage.module.css'
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]); 
@@ -24,7 +25,7 @@ export default function HomePage() {
   }, []); 
 
   return (
-    <>
+    <div className={css.container}>
       <h2>Popular Movies</h2>
       {loading && <b>Loading...</b>} 
       {error && <b>{error}</b>} 
@@ -33,6 +34,6 @@ export default function HomePage() {
       ) : (
         !loading && !error && <p>No popular movies available at the moment.</p> 
       )}
-    </>
+    </div>
   );
 }

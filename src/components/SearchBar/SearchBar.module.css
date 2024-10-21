@@ -1,0 +1,28 @@
+.Form {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   
+   
+} 
+
+
+
+.input {
+    width: 50%;
+    height: 40px;
+    border-radius: 4px;
+
+
+}
+
+.button {
+    width: 120px;
+    height: 40px;
+    background-color: #4285F4;
+    color: azure;
+}
+
+.button:hover {
+    background-color: #0F9D58;
+}
