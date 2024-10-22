@@ -4,12 +4,12 @@ import "/src/App.css";
 import Loader from "/src/components/Loader/Loader.jsx";
 
 
-const HomePage = lazy(() => import("../../Pages/HomePage/HomePage"));
-const MoviesPage = lazy(() => import("../../Pages/MoviesPage/MoviesPage"));
-const MovieDetailsPage = lazy(() => import("../../Pages/MovieDetailsPage/MovieDetailsPage"));
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
+const MoviesPage = lazy(() => import("../../pages/MoviesPage/MoviesPage"));
+const MovieDetailsPage = lazy(() => import("../../pages/MovieDetailsPage/MovieDetailsPage"));
 
 const NotFoundPage = lazy(() =>
-  import("../../Pages/NotFoundPage/NotFoundPage")
+  import("../../pages/NotFoundPage/NotFoundPage")
 );
 const MovieCast = lazy(() => import("../MovieCast/MovieCast"));
 const MovieReviews = lazy(() => import("../MoviesReview/MoviesReviews"));
