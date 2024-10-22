@@ -5,9 +5,11 @@
     gap: 100px;
     padding: 40px;
    font-size: 40px;
-    background-color: #4285F4;
+    background: url(../../assets/img/movie-background-collage_23-2149876007.avif);
+    background-repeat: no-repeat;
     text-transform: uppercase;
     margin-bottom: 100px;
+    background-size: cover;
     
 }
 .link{

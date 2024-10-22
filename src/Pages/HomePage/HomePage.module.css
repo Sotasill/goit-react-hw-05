@@ -6,9 +6,16 @@
     justify-content: space-around;
     gap: 40px;
     border: 1px solid grey;
-    background-color: beige;
+    background: url(../../assets/img/movie-background-collage_23-2149876007.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a:hover {
+    color: rgb(26, 131, 222);
 }
 
 .ul a {
     color: inherit;
 }
+

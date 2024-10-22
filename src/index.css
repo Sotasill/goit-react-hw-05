@@ -1,3 +1,8 @@
+body{
+  background-color: black;
+  color: beige;
+}
+
 a {
   color: inherit;
 }

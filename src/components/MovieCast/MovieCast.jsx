@@ -27,9 +27,9 @@ export default function CastDetails() {
     <div className={css.container}>
       {hasError && <p>Oops, something went wrong!</p>}
       {actors && actors.length > 0 ? (
-        <ul>
+        <ul className={css.actorGrid}>
           {actors.map((actor) => (
-            <li key={actor.id}>
+            <li key={actor.id} className={css.actorCard}>
               <img
                 src={
                   actor.profile_path
