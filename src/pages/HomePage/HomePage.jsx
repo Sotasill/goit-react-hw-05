@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import MovieList from "../../components/MoviesList/MoviesList";
+import MovieList from "../../components/MovieList/MovieList";
 import { fetchPopularMovies } from "../../moviesAPIrequest";
-import css from './HomePage.module.css'
+import css from "./HomePage.module.css";
 import { InfinitySpin } from "react-loader-spinner";
 
 export default function HomePage() {

@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import MenuNavigation from "../PageNavigation/PageNavigation";
+import MenuNavigation from "../Navigation/Navigation";
 import { InfinitySpin } from "react-loader-spinner";
 import css from "./Loader.module.css";
 

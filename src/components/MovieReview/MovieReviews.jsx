@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieReviews } from "../../moviesAPIrequest";
-import css from './MoviesReview.module.css'
+import css from './MovieReview.module.css'
 
 export default function FilmReviews() {
   const { movieId } = useParams();

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import css from "./PageNavigation.module.css";
+import css from "./Navigation.module.css";
 import classNames from "clsx";
 
 const determineNavLinkClass = ({ isActive }) => {

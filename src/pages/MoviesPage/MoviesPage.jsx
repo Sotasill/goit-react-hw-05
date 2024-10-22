@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
 import FilmSearchForm from "../../components/SearchBar/SearchBar";
 import { searchMovieByName } from "../../moviesAPIrequest";
-import FilmList from "../../components/MoviesList/MoviesList";
+import FilmList from "../../components/MovieList/MovieList";
 import { useSearchParams } from "react-router-dom";
 
 export default function FilmsPage() {
-  const [movies, setMovies] = useState([]); 
+  const [movies, setMovies] = useState([]);
   const [fetchError, setFetchError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
-  const movieParam = searchParams.get("query") ?? ""; 
+  const movieParam = searchParams.get("query") ?? "";
 
   useEffect(() => {
     async function fetchNewMovie() {
-      
       if (movieParam === "") {
         setMovies([]);
         return;
@@ -39,7 +38,6 @@ export default function FilmsPage() {
   }, [movieParam]);
 
   const handleSearchMovie = (newMovie) => {
-    
     setSearchParams({ query: newMovie });
   };
 
@@ -48,12 +46,12 @@ export default function FilmsPage() {
       <FilmSearchForm onSearch={handleSearchMovie} disabled={isLoading} />
       {fetchError && <p>Oops, something went wrong!</p>}
       {isLoading && <p>Loading, please wait...</p>}
-      {movies.length > 0 ? ( 
-        <FilmList data={movies} /> 
+      {movies.length > 0 ? (
+        <FilmList data={movies} />
       ) : (
         !isLoading &&
         !fetchError &&
-        movieParam && <p>No results found for {movieParam}.</p> 
+        movieParam && <p>No results found for {movieParam}.</p>
       )}
     </div>
   );
